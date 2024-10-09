@@ -124,6 +124,14 @@ header {
 
 /* Início */
 
+main{
+
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 #inicio {
   height: 100vh;
   width: 100%;
@@ -139,8 +147,8 @@ header {
   height: 80vh;
 
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 40vh 50vh;
+  grid-template-columns: repeat(2, 1fr) 43px;
+  grid-template-rows: 50vh 40vh;
   align-items: center;
 }
 
@@ -173,7 +181,7 @@ header {
 /* Contato */
 
 #contato01{
-  grid-column: 2;
+  grid-column: 3;
 
   display: grid;
   justify-items: end;
@@ -227,6 +235,7 @@ header {
   & p{
     font-size: 2.5em;
     height: 50px;
+
     & span{
       color: #C15DFF;
     }
