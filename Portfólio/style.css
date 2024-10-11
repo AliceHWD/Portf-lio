@@ -124,37 +124,23 @@ header {
 
 /* Início */
 
-main{
-
+main {
   width: 80%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
 }
 
-#inicio {
-  height: 100vh;
-  width: 100%;
-  position: relative;
-}
-
 #parteUm {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: 10%;
-  right: 10%;
-  height: 80vh;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr) 43px;
-  grid-template-rows: 50vh 40vh;
+  grid-template-rows: 60vh 40vh;
   align-items: center;
 }
 
 #apresentacao {
   display: grid;
-  justify-items:center;
+  justify-items: center;
   line-height: 7.5vh;
 
   & #parteEscrita01 {
@@ -180,13 +166,13 @@ main{
 
 /* Contato */
 
-#contato01{
+#contato01 {
   grid-column: 3;
 
   display: grid;
   justify-items: end;
 
-  & a{
+  & a {
     background-color: #C15DFF;
     border-radius: 100px;
     height: 43px;
@@ -200,69 +186,78 @@ main{
     cursor: pointer;
   }
 
-  & svg{
+  & svg {
     height: 30px;
     width: 30px;
-  } 
+  }
 
-  & #github01{
+  & #github01 {
     margin-top: 15px;
     margin-bottom: 15px;
   }
 }
 
-#div-foguete{
+#div-foguete {
   display: grid;
   justify-content: center;
   align-items: end;
   height: 100%;
 }
 
-#foguete{
+#foguete {
   height: 200px;
 }
 
 /* Habilidades */
 
-#habilidades{ 
-  height: 50vh;
-  width: 100%;
+.titulos {
+  font-size: 2.5em;
+  height: 50px;
 
+  & span {
+    color: #C15DFF;
+  }
+}
+
+#habilidades {
+  margin-top: 50px;
+  width: 100%;
   display: grid;
   justify-items: center;
-  grid-template-rows: 50px 50px 22vh;
+  row-gap: 15px;
+  grid-template-rows: 50px 60px 20vh;
 
-  & p{
-    font-size: 2.5em;
-    height: 50px;
-
-    & span{
-      color: #C15DFF;
-    }
-  }
-
-  & #topicos{
-    height: 10vh;
-    width: 50%;
+  & #topicos {
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    column-gap: 30px;
     align-self: center;
 
-    & .linguagens{
+    & .linguagens {
+      display: grid;
+      justify-items: center;
       background-color: #C15DFF;
       height: 18vh;
       border-radius: 10px;
+      width: 150px;
+
+      box-shadow: 2px 2px 4px #474EFE;
+
+      & img {
+        display: grid;
+        align-self: center;
+      }
     }
   }
 
 }
 
-/* From Uiverse.io by kennyotsu */ 
+/* From Uiverse.io by kennyotsu */
 .card {
   border-radius: 1.25rem;
   height: 60px;
 }
+
 .loader {
   color: rgb(124, 124, 124);
   font-family: "Poppins", sans-serif;
@@ -282,16 +277,15 @@ main{
   overflow: hidden;
   position: relative;
 }
+
 .words::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    var(--bg-color) 10%,
-    transparent 30%,
-    transparent 70%,
-    var(--bg-color) 90%
-  );
+  background: linear-gradient(var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%);
   z-index: 20;
 }
 
@@ -343,4 +337,187 @@ main{
     -webkit-transform: translateY(-400%);
     transform: translateY(-400%);
   }
+}
+
+
+/* Área de projetos */
+#projetos {
+  display: grid;
+  justify-items: center;
+
+  margin-top: 150px;
+  row-gap: 50px;
+
+  & #caixas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: 50vh 50vh;
+    justify-content: center;
+    justify-items: center;
+    row-gap: 50px;
+
+    & .caixa-projeto-after {
+      background: linear-gradient(to top, #C15DFF 0%, #474EFE 100%);
+      width: 75%;
+      height: 90%;
+      padding: 2px;
+      border-radius: 1rem;
+
+      & .caixa-projeto {
+        background: #000;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        border-radius: 1rem;
+
+        display: grid;
+        align-items: baseline;
+
+        & .conteudo {
+          background-color: #3700ff4f;
+          border-radius: 10px;
+          height: 20vh;
+        }
+
+        & button {
+          height: 40px;
+          width: 100px;
+          border: 1px solid #fff;
+          background-color: transparent;
+          color: #fff;
+          font-size: 1em;
+          border-radius: 5px;
+        }
+
+        & .botoes {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+        }
+      }
+    }
+  }
+}
+
+#mensagem {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 50vh;
+  margin-top: 100px;
+
+  display: grid;
+  align-items: center;
+  justify-items: center;
+
+}
+
+#blocoUm {
+  height: 40vh;
+  & h2 {
+    font-size: 2.3em;
+    font-weight: bold;
+  }
+
+  & #textoRoxo {
+    color: #C15DFF;
+    font-size: 1.6em;
+    margin-top: 15px;
+  }
+
+  & #meuEmail {
+    display: flex;
+    align-items: center;
+    border: 1px solid #C15DFF;
+    width: 50%;
+    border-radius: 100px 100px 100px 100px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #C15DFF;
+    }
+
+    & svg {
+      height: 20px;
+    }
+
+    & a:nth-child(1) {
+      background-color: #C15DFF;
+      border-radius: 100px;
+      height: 35px;
+      width: 35px;
+      line-height: 100px;
+
+      display: grid;
+      align-items: center;
+      justify-items: center;
+
+      margin-right: 10px;
+    }
+
+    & a:nth-child(2) {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+#blocoDois{
+  display: grid;
+  row-gap: 30px;
+  justify-items: center;
+  & h2{
+    font-size: 2.3em;
+    font-weight: bold;
+  }
+
+  & fieldset{
+    row-gap: 20px;
+    align-items: center;
+
+    height: 40vh;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+
+    & .digitacao{
+      height: 50px;
+      width: 70%;
+      border-radius: 10px;
+      padding-left: 10px;
+      background-color: transparent;
+      border: 2px solid white;
+      color: #fff;
+      font-weight:bold;
+      font-size: 1em;
+      box-shadow: 0px 2px 4px #474EFE;
+
+      &::placeholder{
+        color: #ffffffe0;
+      font-weight: 400;
+      }
+    }
+
+    & textarea{
+      padding-top: 10px;
+      height: 10vh;
+    }
+
+    & #enviar{
+      width: 40%;
+      height: 50px;
+      border-radius: 100px;
+      color: #fff;
+      font-size: 1.2em;
+      box-shadow: 0px 2px 4px #474EFE;
+      background: linear-gradient(to top, #C15DFF, #7000FF);
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+
 }
