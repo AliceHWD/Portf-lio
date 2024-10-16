@@ -8,16 +8,32 @@
   font-style: normal;
 }
 
+body::-webkit-scrollbar {
+  width: 12px;          
+}
+
+body::-webkit-scrollbar-track {
+  background: #1C1C1C;      
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #6600A5;    
+  border-radius: 20px;       
+  border: 3px solid #1C1C1C;  
+}
+
 body {
   background-color: #070C1F;
   color: white;
 }
 
 header {
-  position: relative;
+  position: sticky;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
-
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.4);
   display: grid;
   align-items: end;
   width: 40%;
@@ -35,9 +51,11 @@ header {
   }
 
   & #A {
-    font-size: 1.5em;
+    font-size: 1em;
     font-style: bold;
     cursor: pointer;
+ 
+    display: flex;
   }
 
   /* Switch claro e escuro */
@@ -116,18 +134,19 @@ header {
     cursor: pointer;
     transition: 0.2s;
     font-size: 15px;
-        
-    & a{
-      text-decoration:none;
+
+    & a {
+      text-decoration: none;
       color: white;
 
-      &:hover{
+      &:hover {
         color: #000;
       }
     }
 
-    &:hover{
+    &:hover {
       background-color: white;
+      color: #000;
     }
   }
 
@@ -178,7 +197,7 @@ main {
     cursor: pointer;
     transition: 0.2s;
 
-    &:hover{
+    &:hover {
       background-color: white;
       color: #000;
     }
@@ -212,7 +231,7 @@ main {
     width: 30px;
   }
 
-  & #github01 {
+  & .github01 {
     margin-top: 15px;
     margin-bottom: 15px;
   }
@@ -264,7 +283,7 @@ main {
       transition: 0.3s;
       box-shadow: 2px 2px 4px #474EFE;
 
-      &:hover{
+      &:hover {
         box-shadow: none;
       }
 
@@ -400,12 +419,12 @@ main {
         align-items: baseline;
 
         & .conteudo {
-          background-color: #3700ff4f;
+          background-color: #3700ff31;
           border-radius: 10px;
           height: 20vh;
         }
 
-        & button {
+        & a {
           height: 40px;
           width: 100px;
           border: 1px solid #fff;
@@ -413,6 +432,10 @@ main {
           color: #fff;
           font-size: 1em;
           border-radius: 5px;
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
 
         & .botoes {
@@ -440,6 +463,7 @@ main {
 
 #blocoUm {
   height: 40vh;
+
   & h2 {
     font-size: 2.3em;
     font-weight: bold;
@@ -459,6 +483,7 @@ main {
     border-radius: 100px 100px 100px 100px;
     cursor: pointer;
     transition: 0.2s;
+    margin-top: 20px;
 
     &:hover {
       background-color: #C15DFF;
@@ -489,16 +514,17 @@ main {
   }
 }
 
-#blocoDois{
+#blocoDois {
   display: grid;
   row-gap: 30px;
   justify-items: center;
-  & h2{
+
+  & h2 {
     font-size: 2.3em;
     font-weight: bold;
   }
 
-  & fieldset{
+  & fieldset {
     row-gap: 20px;
     align-items: center;
 
@@ -508,7 +534,7 @@ main {
     flex-direction: column;
     border: none;
 
-    & .digitacao{
+    & .digitacao {
       height: 50px;
       width: 70%;
       border-radius: 10px;
@@ -516,22 +542,22 @@ main {
       background-color: transparent;
       border: 2px solid white;
       color: #fff;
-      font-weight:bold;
+      font-weight: bold;
       font-size: 1em;
       box-shadow: 0px 2px 4px #474EFE;
 
-      &::placeholder{
+      &::placeholder {
         color: #ffffffe0;
-      font-weight: 400;
+        font-weight: 400;
       }
     }
 
-    & textarea{
+    & textarea {
       padding-top: 10px;
       height: 10vh;
     }
 
-    & #enviar{
+    & #enviar {
       width: 40%;
       height: 50px;
       border-radius: 100px;
@@ -541,8 +567,50 @@ main {
       background: linear-gradient(to top, #C15DFF, #7000FF);
       border: none;
       cursor: pointer;
+      transition: 0.3s;
+
+      &:hover{
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+/* Rodapé */
+footer{
+  height: 20vh;
+  background-color: #0C1330;
+  position: relative;
+  text-decoration: none;
+
+  & svg{
+    height: 30px;
+    width: 30px;
+  }
+
+  & #itens{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & p{
+    margin-top: 20px;
+    & a{
+      color: white;
+      text-decoration: none;
     }
   }
 
+  & #contato02{
+    display: flex;
+    justify-content: center;
+
+    & .github01{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
 
 }
