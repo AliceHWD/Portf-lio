@@ -114,6 +114,21 @@ header {
     color: white;
     border-radius: 100px;
     cursor: pointer;
+    transition: 0.2s;
+    font-size: 15px;
+        
+    & a{
+      text-decoration:none;
+      color: white;
+
+      &:hover{
+        color: #000;
+      }
+    }
+
+    &:hover{
+      background-color: white;
+    }
   }
 
   & #linha-colorida {
@@ -161,6 +176,12 @@ main {
     background-color: transparent;
     border-radius: 100px;
     cursor: pointer;
+    transition: 0.2s;
+
+    &:hover{
+      background-color: white;
+      color: #000;
+    }
   }
 }
 
@@ -240,8 +261,12 @@ main {
       height: 18vh;
       border-radius: 10px;
       width: 150px;
-
+      transition: 0.3s;
       box-shadow: 2px 2px 4px #474EFE;
+
+      &:hover{
+        box-shadow: none;
+      }
 
       & img {
         display: grid;
