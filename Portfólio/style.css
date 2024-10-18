@@ -9,17 +9,17 @@
 }
 
 body::-webkit-scrollbar {
-  width: 12px;          
+  width: 12px;
 }
 
 body::-webkit-scrollbar-track {
-  background: #1C1C1C;      
+  background: #1C1C1C;
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #6600A5;    
-  border-radius: 20px;       
-  border: 3px solid #1C1C1C;  
+  background-color: #6600A5;
+  border-radius: 20px;
+  border: 3px solid #1C1C1C;
 }
 
 body {
@@ -32,13 +32,63 @@ header {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 99;
-  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 98;
+  background-color: #070c1f8a;
   display: grid;
   align-items: end;
   width: 40%;
   height: 8vh;
 
+  /* Dropdown */
+  & #A {
+    display: grid;
+    align-items: center;
+  }
+
+  & #detalhes{
+    text-decoration:none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  & ul li ul#dropdown li{
+    display: block;
+  }
+
+  & ul li ul#dropdown{
+    width: 33%;  
+    position: absolute;
+    z-index: 999;
+    display: none;
+    background: linear-gradient(to right, #100049, #170168, #100049);
+    border-radius: 0px 0px 10px 10px;
+    color: white;
+    top: 80%;
+    border: 1px solid white;
+    padding: 10px;
+  }
+
+  & ul li a:hover{
+    text-decoration: underline;
+
+  }
+
+  & ul li ul li a{
+    text-decoration:none;
+    color: white; 
+  }
+
+  & ul li ul li{
+    padding-top: 5px;
+  }
+
+  & ul li:hover ul#dropdown{
+    display: block;
+    padding-top: 10px;
+  }
+
+  /* - */
 
   & ul {
     display: grid;
@@ -50,12 +100,32 @@ header {
     text-align: center;
   }
 
-  & #A {
-    font-size: 1em;
-    font-style: bold;
+  /* Botão do currículo */
+  & #CV {
+    display: grid;
+    align-items: center;
+    margin: auto;
+    width: 45%;
+    padding: 8px;
+    background-color: #070C1F;
+    border: 1px solid white;
+    color: white;
+    border-radius: 100px;
     cursor: pointer;
- 
-    display: flex;
+    transition: 0.2s;
+    font-size: 15px;
+    text-decoration: none;
+
+    &:hover {
+      color: #000000;
+      background-color: white;
+    }
+
+  }
+
+  & #linha-colorida {
+    height: 2px;
+    background: linear-gradient(to right, #BF1E1E, #7000FF, #BF1E1E);
   }
 
   /* Switch claro e escuro */
@@ -120,40 +190,6 @@ header {
     background: linear-gradient(40deg, #ff0080, #ff8c00 70%);
     box-shadow: none;
   }
-
-  /* Botão do currículo */
-  & button {
-    height: 4vh;
-    width: 35%;
-    background-color: #070C1F;
-    border-width: 1px;
-    border-style: solid;
-    border-color: white;
-    color: white;
-    border-radius: 100px;
-    cursor: pointer;
-    transition: 0.2s;
-    font-size: 15px;
-
-    & a {
-      text-decoration: none;
-      color: white;
-
-      &:hover {
-        color: #000;
-      }
-    }
-
-    &:hover {
-      background-color: white;
-      color: #000;
-    }
-  }
-
-  & #linha-colorida {
-    height: 2px;
-    background: linear-gradient(to right, #BF1E1E, #7000FF, #BF1E1E);
-  }
 }
 
 /* Início */
@@ -167,7 +203,7 @@ main {
 
 #parteUm {
   display: grid;
-  grid-template-columns: repeat(2, 1fr) 43px;
+  grid-template-columns: repeat(2, 1fr) ;
   grid-template-rows: 60vh 40vh;
   align-items: center;
 }
@@ -189,8 +225,8 @@ main {
   & button {
     font-size: 1em;
     color: white;
-    height: 4vh;
-    width: 20%;
+    height: 5vh;
+    width: 15%;
     border: 1px solid white;
     background-color: transparent;
     border-radius: 100px;
@@ -204,36 +240,116 @@ main {
   }
 }
 
-/* Contato */
+/* Desenho bonitinho */
+/* From Uiverse.io by zanina-yassine */ 
+.container {
+  width: 280px;
+  height: 280px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
 
-#contato01 {
-  grid-column: 3;
+.cloud {
+  width: 280px;
+}
 
-  display: grid;
-  justify-items: end;
+.front {
+  padding-top: 45px;
+  margin-left: 25px;
+  display: inline;
+  position: absolute;
+  z-index: 11;
+  animation: clouds 8s infinite;
+  animation-timing-function: ease-in-out;
+}
 
-  & a {
-    background-color: #C15DFF;
-    border-radius: 100px;
-    height: 43px;
-    width: 43px;
-    line-height: 100px;
+.back {
+  margin-top: -30px;
+  margin-left: 150px;
+  z-index: 12;
+  animation: clouds 12s infinite;
+  animation-timing-function: ease-in-out;
+}
 
-    display: grid;
-    align-items: center;
-    justify-items: center;
+.right-front {
+  width: 45px;
+  height: 45px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c4feb;
+  display: inline-block;
+  margin-left: -25px;
+  z-index: 5;
+}
 
-    cursor: pointer;
+.left-front {
+  width: 65px;
+  height: 65px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c4feb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.right-back {
+  width: 50px;
+  height: 50px;
+  border-radius: 50% 50% 50% 0%;
+  background-color: #4c4feb;
+  display: inline-block;
+  margin-left: -20px;
+  z-index: 5;
+}
+
+.left-back {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 0% 50%;
+  background-color: #4c4feb;
+  display: inline-block;
+  z-index: 5;
+}
+
+.sun {
+  width: 180px;
+  height: 180px;
+  background: -webkit-linear-gradient(to right, #fcbb04, #fffc00);
+  box-shadow: inset -50px -2px 5px -2px #aaa5ff, inset -10px -4px 0 0 #a3dafb;
+  border-radius: 100px;
+ /*  background: linear-gradient(to right, #fcbb04, #fffc00); */
+  display: inline;
+  position: absolute;
+}
+
+.sunshine {
+  animation: sunshines 2s infinite;
+}
+
+@keyframes sunshines {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
   }
 
-  & svg {
-    height: 30px;
-    width: 30px;
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+@keyframes clouds {
+  0% {
+    transform: translateX(15px);
   }
 
-  & .github01 {
-    margin-top: 15px;
-    margin-bottom: 15px;
+  50% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(15px);
   }
 }
 
@@ -422,6 +538,10 @@ main {
           background-color: #3700ff31;
           border-radius: 10px;
           height: 20vh;
+
+          &:hover{
+            scale: 1.1;
+          }
         }
 
         & a {
@@ -436,6 +556,11 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
+
+          &:hover {
+            color: #000;
+            background-color: white;
+          }
         }
 
         & .botoes {
@@ -569,45 +694,52 @@ main {
       cursor: pointer;
       transition: 0.3s;
 
-      &:hover{
+      &:hover {
         box-shadow: none;
+        background: linear-gradient(to top, #C15DFF, #7000FF);
+        scale: 1.05;
       }
     }
   }
 }
 
 /* Rodapé */
-footer{
+footer {
   height: 20vh;
   background-color: #0C1330;
   position: relative;
   text-decoration: none;
 
-  & svg{
+  & svg {
     height: 30px;
     width: 30px;
+
+    &:hover{
+      opacity: 0.9;
+    }
   }
 
-  & #itens{
+  & #itens {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
-  & p{
+  & p {
     margin-top: 20px;
-    & a{
+
+    & a {
       color: white;
       text-decoration: none;
     }
   }
 
-  & #contato02{
+  & #contato02 {
     display: flex;
     justify-content: center;
 
-    & .github01{
+    & .github01 {
       padding-left: 10px;
       padding-right: 10px;
     }
