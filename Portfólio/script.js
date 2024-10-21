@@ -1,4 +1,4 @@
-function darkMode(){
-    let corpo = corpo.body;
-    corpo.classList.toggle("dark");
-}
+function light() {
+    var element = document.body;
+    element.classList.toggle("light-mode");
+  }
