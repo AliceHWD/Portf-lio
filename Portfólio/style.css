@@ -227,6 +227,7 @@ main {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  min-width: 320px;
 }
 
 #parteUm {
@@ -254,7 +255,7 @@ main {
     font-size: 1em;
     color: white;
     height: 5vh;
-    width: 15%;
+    width: 95px;
     border: 1px solid white;
     background-color: transparent;
     border-radius: 100px;
@@ -431,9 +432,9 @@ main {
       display: grid;
       justify-items: center;
       background-color: #C15DFF;
-      height: 18vh;
+      height: 140px;
       border-radius: 10px;
-      width: 150px;
+      width: 80%;
       transition: 0.3s;
       box-shadow: 2px 2px 4px #474EFE;
 
@@ -444,6 +445,7 @@ main {
       & img {
         display: grid;
         align-self: center;
+        width: 50%;
       }
     }
   }
@@ -613,6 +615,7 @@ main {
           display: flex;
           flex-direction: row;
           justify-content: space-around;
+          flex-wrap: wrap;
         }
       }
     }
@@ -650,7 +653,7 @@ main {
     display: flex;
     align-items: center;
     border: 1px solid #C15DFF;
-    width: 50%;
+    width: 260px;
     border-radius: 100px 100px 100px 100px;
     cursor: pointer;
     transition: 0.2s;
