@@ -14,6 +14,8 @@
   color: #000;
 }
 
+/* Scroll */
+
 body::-webkit-scrollbar {
   width: 12px;
 }
@@ -21,7 +23,7 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-track {
   background: #1C1C1C;
 
-  .light-mode &{
+  .light-mode & {
     background: #002aff;
   }
 }
@@ -32,10 +34,14 @@ body::-webkit-scrollbar-thumb {
   border: 3px solid #1C1C1C;
 }
 
+/* Corpo */
+
 body {
   background-color: #070C1F;
   color: white;
 }
+
+/* Cabeçalho */
 
 header {
   position: sticky;
@@ -85,7 +91,7 @@ header {
     border: 1px solid white;
     padding: 10px;
 
-    .light-mode &{
+    .light-mode & {
       background-color: #E0E5FF;
     }
   }
@@ -97,7 +103,7 @@ header {
   & ul li ul li a {
     color: white;
 
-    .light-mode &{
+    .light-mode & {
       color: #000;
     }
   }
@@ -122,6 +128,7 @@ header {
   & li {
     text-align: center;
   }
+
 
   /* Botão do currículo */
   & #CV {
@@ -148,7 +155,6 @@ header {
       background-color: white;
       text-decoration: none;
     }
-
   }
 
   & #linha-colorida {
@@ -165,23 +171,23 @@ header {
 
     --width-of-switch: 4em;
     --height-of-switch: 2em;
-    /* size of sliding icon -- sun and moon */
+    /* -size of sliding icon -- sun and moon */
     --size-of-icon: 1.2em;
-    /* it is like a inline-padding of switch */
+    /* -it is like a inline-padding of switch */
     --slider-offset: 0.3em;
     position: relative;
     width: var(--width-of-switch);
     height: var(--height-of-switch);
   }
 
-  /* Hide default HTML checkbox */
+  /* -Hide default HTML checkbox */
   & .switch input {
     opacity: 0;
     width: 0;
     height: 0;
   }
 
-  /* The slider */
+  /* -The slider */
   & .slider {
     position: absolute;
     cursor: pointer;
@@ -220,7 +226,7 @@ header {
   }
 }
 
-/* Início */
+/* Início da main*/
 
 main {
   width: 80%;
@@ -392,6 +398,7 @@ main {
   }
 }
 
+
 #div-foguete {
   display: grid;
   justify-content: center;
@@ -424,6 +431,7 @@ main {
 
   & #topicos {
     width: 70%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-self: center;
@@ -432,7 +440,7 @@ main {
       display: grid;
       justify-items: center;
       background-color: #C15DFF;
-      height: 140px;
+      height: 100%;
       border-radius: 10px;
       width: 80%;
       transition: 0.3s;
@@ -539,7 +547,6 @@ main {
   }
 }
 
-
 /* Área de projetos */
 #projetos {
   display: grid;
@@ -590,7 +597,7 @@ main {
 
         & a {
           height: 40px;
-          width: 100px;
+          width: 30%;
           border: 1px solid #fff;
           background-color: transparent;
           color: #fff;
@@ -768,7 +775,7 @@ footer {
   background-color: #0C1330;
   position: relative;
 
-  .light-mode &{
+  .light-mode & {
     background-color: #313367;
     color: #ffffff;
   }
@@ -804,6 +811,38 @@ footer {
     & .github01 {
       padding-left: 10px;
       padding-right: 10px;
+    }
+  }
+
+}
+
+@media screen and (max-width: 1020px) {
+
+  /* Header */
+  #detalhes {
+    display: none;
+  }
+
+  /* Media para parte um e dois */
+  .container {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  #parteUm {
+    grid-template-columns: 1fr;
+  }
+
+  /*  */
+  #mensagem{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    & #blocoUm{
+      opacity: 0;
+      height: 0;
+      width: 0;
     }
   }
 
