@@ -9,6 +9,10 @@
   text-decoration: none;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .light-mode {
   background-color: #E0E5FF;
   color: #000;
@@ -153,7 +157,7 @@ header {
 
     &:hover {
       color: #000000;
-
+      background-color: white;
       text-decoration: none;
     }
   }
@@ -561,7 +565,7 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 30%);
-    grid-template-rows: 50vh 50vh;
+    grid-template-rows: 35vh 35vh;
     justify-content: center;
     justify-items: center;
     row-gap: 50px;
@@ -728,7 +732,6 @@ main {
     border: 1px solid #C15DFF;
     width: 260px;
     border-radius: 100px 100px 100px 100px;
-    cursor: pointer;
     transition: 0.2s;
     margin-top: 20px;
 
@@ -906,12 +909,13 @@ footer {
     }
 
     & ul li ul#dropdown {
-      width: 110px;
+      width: 40%;
+      font-size: 12px;
     }
-  }
 
-  #detalhes {
-    display: none;
+    & #detalhes {
+      font-size: 1.2em;
+    }
   }
 
   #CV {
@@ -952,7 +956,7 @@ footer {
   }
 
   #habilidades {
-
+    row-gap: 0;
     & #topicos {
       grid-template-columns: 1fr 1fr 1fr;
       row-gap: 20px;
@@ -969,19 +973,19 @@ footer {
     & #caixas {
       width: 100%;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 40vh 40vh;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 40vh);
     }
 
     & .caixa-projeto{
       width: 100%;
     }
 
-    & .conteudo{
-      height: 20px;
-    }
   }
 
+  .card{
+    width: 100%;
+  }
   .container {
     opacity: 0;
     width: 0;
@@ -1015,4 +1019,14 @@ footer {
     }
   }
 
+}
+
+@media (min-width: 560px) and (max-width: 1019px){
+
+  #projetos {
+    & #caixas {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, 40vh);
+    }
+  }
 }
