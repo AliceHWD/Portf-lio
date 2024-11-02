@@ -9,7 +9,7 @@
   text-decoration: none;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -263,7 +263,7 @@ main {
     color: #C15DFF;
   }
 
-  & button {
+  & a {
     font-size: 1em;
     color: white;
     height: 5vh;
@@ -273,6 +273,9 @@ main {
     border-radius: 100px;
     cursor: pointer;
     transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .light-mode & {
       color: #000;
@@ -433,7 +436,7 @@ main {
   display: grid;
   justify-items: center;
   row-gap: 15px;
-  grid-template-rows: 50px 60px 20vh;
+  grid-template-rows: 50px 60px auto;
 
   & #topicos {
     width: 70%;
@@ -451,6 +454,7 @@ main {
       width: 80%;
       transition: 0.3s;
       box-shadow: 2px 2px 4px #474EFE;
+      padding: 15px;
 
       &:hover {
         box-shadow: none;
@@ -460,6 +464,7 @@ main {
         display: grid;
         align-self: center;
         width: 50%;
+        height: 90%;
       }
     }
   }
@@ -590,7 +595,8 @@ main {
         .light-mode & {
           background-color: #E0E5FF;
         }
-/* 
+
+        /* 
         & .conteudo {
           background-color: #ffffff28;
           border-radius: 10px;
@@ -635,12 +641,12 @@ main {
   }
 }
 
-/* From Uiverse.io by gharsh11032000 */ 
+/* From Uiverse.io by gharsh11032000 */
 .card {
   position: relative;
   width: 16.5vw;
   height: 20vh;
-  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100% );
+  background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -705,11 +711,8 @@ main {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 50vh;
   margin-top: 100px;
-
-  display: grid;
   align-items: center;
   justify-items: center;
-
 }
 
 #blocoUm {
@@ -761,6 +764,55 @@ main {
     & a:nth-child(2) {
       color: #fff;
     }
+  }
+}
+
+#tudoSobre{
+  width: 90%;
+}
+
+.aparecer {
+  display: none;
+}
+
+#textoSobre {
+  opacity: 1;
+  width: 60%;
+  border: 1px solid #ffffff49;
+  border-radius: 5px;
+  padding: 5px;
+
+  .aparecer & {
+    display: none;
+  }
+}
+
+#sobreMim {
+  margin-top: 20px;
+  background-color: transparent;
+  color: white;
+  font-size: 20px;
+  border: none;
+
+  .light-mode &{
+    color: #000;
+  }
+
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+@media(max-width: 1500px) {
+  #sobreMim {
+    display: none;
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+
+  #textoSobre {
+    display: none;
   }
 }
 
@@ -957,6 +1009,7 @@ footer {
 
   #habilidades {
     row-gap: 0;
+
     & #topicos {
       grid-template-columns: 1fr 1fr 1fr;
       row-gap: 20px;
@@ -977,15 +1030,16 @@ footer {
       grid-template-rows: repeat(6, 40vh);
     }
 
-    & .caixa-projeto{
+    & .caixa-projeto {
       width: 100%;
     }
 
   }
 
-  .card{
+  .card {
     width: 100%;
   }
+
   .container {
     opacity: 0;
     width: 0;
@@ -1021,7 +1075,7 @@ footer {
 
 }
 
-@media (min-width: 560px) and (max-width: 1019px){
+@media (min-width: 560px) and (max-width: 1019px) {
 
   #projetos {
     & #caixas {
