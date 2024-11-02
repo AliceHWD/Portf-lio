@@ -971,7 +971,7 @@ footer {
   }
 
   #CV {
-    content: url(/Portfólio/img/file-export-solid.svg);
+    content: url(img/file-export-solid.svg);
     height: 35px;
     width: 15px;
 
